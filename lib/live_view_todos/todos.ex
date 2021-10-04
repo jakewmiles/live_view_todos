@@ -8,6 +8,12 @@ defmodule LiveViewTodos.Todos do
 
   alias LiveViewTodos.Todos.Todo
 
+  @topic inspect(__MODULE__)
+
+  def subscribe do
+    Phoenix.PubSub.subscribe(LiveViewTodos.PubSub, @topic)
+  end
+  
   @doc """
   Returns the list of todos.
 
