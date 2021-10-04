@@ -6,8 +6,4 @@ defmodule LiveViewTodosWeb.TodoLive do
     {:ok, assign(socket, todos: Todos.list_todos())}
   end
 
-  def render(assigns) do
-    ~L"Rendering LiveView"
-  end
-
 end
